@@ -22,40 +22,38 @@ Select ONE Additional
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <button id="mem1-button">Memory #1</button>
-    <button id="mem2-button">Memory #2</button>
-    <button id="mem3-button">Memory #3</button>
-    <h1>My Top 3 Memories of <span>This Year</span></h1>
-    <ol>
-      <li>
-        <h3 id="mem1">Memory #1</h3>
-        <p>More about this memory.</p>
-      </li>
+      <h1 id="main-title">Welcome to My Flower Gallery</h1>
+  <p class="description">Click the button to change the gallery style!</p>
+  <button id="changeStyleBtn">Change Style</button>
 
-      <li>
-        <h3 id="mem2">Memory #2</h3>
-        <p>More about this memory.</p>
-      </li>
-
-      <li>
-        <h3 id="mem3">Memory #3</h3>
-        <p>More about this memory</p>
-      </li>
-    </ol>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <div class="gallery">
+    <img src="https://www.colorblends.com/wp-content/uploads/2020/01/1411_FrenchBlendRose_PEH1359sq-1024x1024.jpg" alt="Flower 1"width="200" />
+    <img src="https://www.ecusltd.co.uk/wp-content/uploads/2024/06/cherry-blossom-aspect-ratio-1200-900.webp" alt="Flower 2"width="200" />
+    <img src="https://www.peachtreepetals.com/cdn/shop/articles/all_about_sunflowers.jpg?crop=center&height=1200&v=1631036676&width=1200" alt="Flower 3"width="200" />
+  </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
-      $("#mem1-button").click(function () {
-        $("#mem1").css("color", "purple");
-      });
+     
+$("h1").css("font-size", "36px");
+$(".description").css("color", "rgb(51, 51, 51)");
+$("#changeStyleBtn").css("padding", "10px");
 
-      $("#mem2-button").click(function () {
-        $("#mem2").css("color", "blue");
-      });
+/
+$("img").mouseover(function () {
+  $(this).addClass("highlight");
+});
+$("img").mouseout(function () {
+  $(this).removeClass("highlight");
+});
+$("#changeStyleBtn").click(function () {
+  $("body").css("background-color", "rgb(255, 228, 225)");
+});
 
-      $("#mem3-button").click(function () {
-        $("#mem3").css("color", "green");
-      });
+
+$("#main-title").click(function () {
+  $(this).addClass("highlight");
+});
+
     </script>
   </body>
 </html>
